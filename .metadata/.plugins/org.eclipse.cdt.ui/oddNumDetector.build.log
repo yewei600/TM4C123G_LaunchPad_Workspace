@@ -1,0 +1,13 @@
+
+**** Build of configuration Debug for project oddNumDetector ****
+
+"C:\\Program Files (x86)\\ccsv6\\utils\\bin\\gmake" -k all 
+
+**** Build of configuration Debug for project oddNumDetector ****
+
+!CommandLauncher.error.commandCanceled!
+Error: Program "C:/Program Files (x86)/ccsv6/utils/bin/gmake" is not found in PATH
+
+PATH=[C:\Program Files (x86)\ccsv6\ccs_base\emulation\analysis\bin\..\..\..\common\bin;C:\Program Files (x86)\ccsv6\ccs_base\emulation\analysis\bin\..\..\..\DebugServer\bin;C:\Program Files (x86)\ccsv6\ccs_base\emulation\analysis\bin\ofs;C:\Program Files (x86)\ccsv6\ccs_base\common\bin;C:\Program Files (x86)\ccsv6\ccs_base\common\uscif;C:\Program Files (x86)\ccsv6\ccs_base\DebugServer\license;C:/Program Files (x86)/ccsv6/eclipse/jre/bin/client;C:/Program Files (x86)/ccsv6/eclipse/jre/bin;C:/Program Files (x86)/ccsv6/eclipse/jre/lib/i386;C:\ProgramData\Oracle\Java\javapath;C:\oraclexe\app\oracle\product\11.2.0\server\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\MATLAB\R2013a\runtime\win64;C:\Program Files\MATLAB\R2013a\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Schneider Electric\Pelco Viewer 3.0.0\Libs;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\HashiCorp\Vagrant\bin;C:\Program Files (x86)\Skype\Phone\;C:\Ruby22-x64\bin;c:\users\eric\appdata\local\enthought\canopy\user\scripts;C:\Program Files\Java\jdk1.7.0_45\bin;C:\cygwin64\bin;C:\Users\Eric\AppData\Local\Enthought\Canopy\User;C:\Users\Eric\AppData\Local\Enthought\Canopy\User\Scripts;.;;C:\Program Files (x86)\ccsv6\eclipse;;C:\Program Files (x86)\ccsv6\ccs_base\emulation\analysis\bin\.;C:\Program Files (x86)\ccsv6\ccs_base\emulation\analysis\bin\../xmldb/aet_config;C:\Program Files (x86)\ccsv6\ccs_base\emulation\analysis\bin\../xmldb/trace_config/setup;C:\Program Files (x86)\ccsv6\ccs_base\emulation\analysis\bin\../xmldb/trace_config/devices;C:\Program Files (x86)\ccsv6\ccs_base\emulation\analysis\bin\../../../common/bin;C:\Program Files (x86)\ccsv6\ccs_base\emulation\analysis\bin\../../../common/uscif;C:\Program Files (x86)\ccsv6\ccs_base\emulation\analysis\bin\../../tpi;C:\Program Files (x86)\ccsv6\ccs_base\DebugServer\drivers]
+
+**** Build Finished ****

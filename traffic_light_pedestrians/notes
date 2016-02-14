@@ -1,0 +1,20 @@
+This means the roads must both be red before the walk light is activated. 
+
+In a similar fashion, when a car sensor is 0V, it means no cars are waiting to enter the intersection. The don't walk light should be on while cars have a green or yellow light.
+
+
+ Often we will need to have multiple states with the same output value
+ 
+ 
+ 
+ push walk button
+ 
+ cars    ped
+ RR       G
+ no switch pressed,  stays in that state
+ 
+ now there's a car, or 2 cars
+ RR       don't walk (R flashes) (for little time)
+ 
+ 1R1G     R
+ 

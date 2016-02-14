@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 1 resources to &apos;adc_pot&apos;" description="Move 1 resources to &apos;adc_pot&apos;" destination="/adc_pot" element1="/ADC/driverlib.lib" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1454084527978" updateReferences="true"/>
+</session>

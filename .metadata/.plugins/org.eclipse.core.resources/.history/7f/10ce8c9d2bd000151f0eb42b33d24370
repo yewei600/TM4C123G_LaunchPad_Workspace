@@ -1,0 +1,74 @@
+
+#include <stdint.h>
+#include <stdbool.h>
+#include "inc/hw_memmap.h"
+#include "inc/hw_types.h"
+#include "driverlib/interrupt.h"
+#include "driverlib/sysctl.h"
+#include "driverlib/gpio.h"
+#include "driverlib/systick.h"
+
+#define NORTH 0
+#define waitNORTH 1
+#define EAST 2
+#define waitEAST 3
+
+
+
+uint32_t ui32Value;
+uint8_t ui8PinData=1;
+uint8_t index=0;
+
+//FSM struct
+struct State{
+	unsigned char ledOutput;
+	unsigned short wait;
+	unsigned char next[4];
+};
+
+typedef const struct State StateType;
+
+
+
+
+/*
+ * main.c
+ */
+int main(void) {
+	//4MHz clock
+	SysCtlClockSet(SYSCTL_SYSDIV_25|SYSCTL_USE_PLL|SYSCTL_XTAL_16MHZ|SYSCTL_OSC_MAIN);
+
+	//GPIO init
+	SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOE);
+	SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOB);
+	SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOA);
+	GPIOPinTypeGPIOInput(SYSCTL_PERIPH_GPIOE,GPIO_PIN_0|GPIO_PIN_1);
+	GPIOPinTypeGPIOOutput(SYSCTL_PERIPH_GPIOB,GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3|GPIO_PIN_4|GPIO_PIN_5);
+	GPIOPinTypeGPIOOutput(SYSCTL_PERIPH_GPIOA,GPIO_PIN_2);
+
+	//the LED light sequence: RYG(East)RYG(North)
+	StateType FSM[4]={
+			{33,3000000,{NORTH,waitNORTH,NORTH,waitNORTH}},  //GoN
+			{34,500000,{EAST,EAST,EAST,EAST}},  //WaitN
+			{12,3000000,{EAST,EAST,waitEAST,waitEAST}},  //GoE
+			{20,500000,{NORTH,NORTH,NORTH,NORTH}},  //WaitE
+	};
+
+
+	int number[]={GPIO_PIN_0,GPIO_PIN_1,GPIO_PIN_2,GPIO_PIN_3,GPIO_PIN_4,GPIO_PIN_5};
+
+
+
+	while(1){
+
+		GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_2,4);
+		SysCtlDelay(5000000);
+		GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_2,0);
+		SysCtlDelay(5000000);
+	}
+
+
+
+
+	return 0;
+}

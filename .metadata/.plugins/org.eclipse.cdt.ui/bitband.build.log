@@ -1,0 +1,16 @@
+
+**** Clean-only build of configuration Debug for project bitband ****
+
+"C:\\Program Files (x86)\\ccsv6\\utils\\bin\\gmake" -k clean 
+DEL /F  "bitband.out"  "bitband.hex" 
+Could Not Find C:\TM4C123G_LaunchPad_Workshop\bitband\Debug\bitband.out
+DEL /F "bitband.pp" "startup_ccs.pp" "utils\uartstdio.pp" 
+Could Not Find C:\TM4C123G_LaunchPad_Workshop\bitband\Debug\bitband.pp
+Could Not Find C:\TM4C123G_LaunchPad_Workshop\bitband\Debug\utils\uartstdio.pp
+DEL /F "bitband.obj" "startup_ccs.obj" "utils\uartstdio.obj" 
+Could Not Find C:\TM4C123G_LaunchPad_Workshop\bitband\Debug\bitband.obj
+Could Not Find C:\TM4C123G_LaunchPad_Workshop\bitband\Debug\utils\uartstdio.obj
+'Finished clean'
+' '
+
+**** Build Finished ****

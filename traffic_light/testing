@@ -1,0 +1,33 @@
+
+	while(1){
+
+		if(GPIOPinRead(GPIO_PORTD_BASE,GPIO_PIN_0)){
+			GPIOPinWrite(GPIO_PORTE_BASE,GPIO_PIN_3,8);
+		}
+		if(GPIOPinRead(GPIO_PORTD_BASE,GPIO_PIN_0)==0){
+			GPIOPinWrite(GPIO_PORTE_BASE,GPIO_PIN_3,0);
+		}
+
+
+		if(ui8PinData==32){
+			ui8PinData=1;
+		}
+		else{
+			ui8PinData*=2;
+		}
+
+	}
+
+	
+	
+	previous :::
+	
+		//the LED light sequence: RYG(East)RYG(North)
+	StateType FSM[4]={
+			//{}
+			{33,1000000,{NORTH,waitNORTH,NORTH,waitNORTH}},  //NORTH
+			{34,500000,{EAST,EAST,EAST,EAST}},  //waitNORTH
+			{12,1000000,{EAST,EAST,waitEAST,waitEAST}},  //EAST
+			{20,500000,{NORTH,NORTH,NORTH,NORTH}},  //waitEAST
+	};
+	

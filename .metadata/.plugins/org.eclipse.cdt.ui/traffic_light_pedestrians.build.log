@@ -1,0 +1,22 @@
+
+**** Build of configuration Debug for project traffic_light_pedestrians ****
+
+"C:\\Program Files (x86)\\ccsv6\\utils\\bin\\gmake" -k all 
+'Building file: ../main.c'
+'Invoking: ARM Compiler'
+"C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 --abi=eabi -me --include_path="C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/include" --include_path="C:/ti/TivaWare_C_Series-2.1.1.71" -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="main.pp"  "../main.c"
+"../main.c", line 168: warning #112-D: statement is unreachable
+"../main.c", line 44: warning #179-D: variable "ui32Value" was declared but never referenced
+"../main.c", line 45: warning #179-D: variable "ui8PinData" was declared but never referenced
+"../main.c", line 47: warning #179-D: variable "index" was declared but never referenced
+"../main.c", line 49: warning #179-D: variable "prevState" was declared but never referenced
+'Finished building: ../main.c'
+' '
+'Building target: traffic_light_pedestrians.out'
+'Invoking: ARM Linker'
+"C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 --abi=eabi -me -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --display_error_number --diag_warning=225 --diag_wrap=off -z -m"traffic_light_pedestrians.map" --heap_size=0 --stack_size=512 -i"C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/lib" -i"C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="traffic_light_pedestrians_linkInfo.xml" --rom_model -o "traffic_light_pedestrians.out"  "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "C:/ti/TivaWare_C_Series-2.1.1.71/driverlib/ccs/Debug/driverlib.lib" "../tm4c123gh6pm.cmd" -l"libc.a" 
+<Linking>
+'Finished building target: traffic_light_pedestrians.out'
+' '
+
+**** Build Finished ****
