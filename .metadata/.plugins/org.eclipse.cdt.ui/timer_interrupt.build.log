@@ -3,11 +3,11 @@
 
 "C:\\Program Files (x86)\\ccsv6\\utils\\bin\\gmake" -k clean 
 DEL /F  "timer_interrupt.out"  "timer_interrupt.hex" 
-Could Not Find C:\TM4C123G_LaunchPad_Workshop\timer_interrupt\Debug\timer_interrupt.out
+Could Not Find C:\TM4C123G_LaunchPad_Workspace\timer_interrupt\Debug\timer_interrupt.out
 DEL /F "main.pp" "tm4c123gh6pm_startup_ccs.pp" 
-Could Not Find C:\TM4C123G_LaunchPad_Workshop\timer_interrupt\Debug\main.pp
+Could Not Find C:\TM4C123G_LaunchPad_Workspace\timer_interrupt\Debug\main.pp
 DEL /F "main.obj" "tm4c123gh6pm_startup_ccs.obj" 
-Could Not Find C:\TM4C123G_LaunchPad_Workshop\timer_interrupt\Debug\main.obj
+Could Not Find C:\TM4C123G_LaunchPad_Workspace\timer_interrupt\Debug\main.obj
 'Finished clean'
 ' '
 

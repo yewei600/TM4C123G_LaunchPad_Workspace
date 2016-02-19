@@ -1,114 +1,71 @@
 
-**** Build of configuration Debug for project traffic_light_pedestrians ****
+**** Build of configuration Debug for project UART_2boards ****
 
 "C:\\Program Files (x86)\\ccsv6\\utils\\bin\\gmake" -k all 
 'Building file: ../main.c'
 'Invoking: ARM Compiler'
 "C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 --abi=eabi -me --include_path="C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/include" --include_path="C:/ti/TivaWare_C_Series-2.1.1.71" -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="main.pp"  "../main.c"
-"../main.c", line 165: warning #112-D: statement is unreachable
-"../main.c", line 44: warning #179-D: variable "ui32Value" was declared but never referenced
-"../main.c", line 45: warning #179-D: variable "ui8PinData" was declared but never referenced
-"../main.c", line 47: warning #179-D: variable "index" was declared but never referenced
 'Finished building: ../main.c'
 ' '
-'Building target: traffic_light_pedestrians.out'
+'Building file: ../tm4c123gh6pm_startup_ccs.c'
+'Invoking: ARM Compiler'
+"C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 --abi=eabi -me --include_path="C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/include" --include_path="C:/ti/TivaWare_C_Series-2.1.1.71" -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="tm4c123gh6pm_startup_ccs.pp"  "../tm4c123gh6pm_startup_ccs.c"
+"../tm4c123gh6pm_startup_ccs.c", line 93: warning #145-D: a value of type "int (*)(void)" cannot be used to initialize an entity of type "void (*const)(void)"
+'Finished building: ../tm4c123gh6pm_startup_ccs.c'
+' '
+'Building target: UART_2boards.out'
 'Invoking: ARM Linker'
-"C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 --abi=eabi -me -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --display_error_number --diag_warning=225 --diag_wrap=off -z -m"traffic_light_pedestrians.map" --heap_size=0 --stack_size=512 -i"C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/lib" -i"C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="traffic_light_pedestrians_linkInfo.xml" --rom_model -o "traffic_light_pedestrians.out"  "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "C:/ti/TivaWare_C_Series-2.1.1.71/driverlib/ccs/Debug/driverlib.lib" "../tm4c123gh6pm.cmd" -l"libc.a" 
+"C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 --abi=eabi -me -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --display_error_number --diag_warning=225 --diag_wrap=off -z -m"UART_2boards.map" --heap_size=0 --stack_size=512 -i"C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/lib" -i"C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="UART_2boards_linkInfo.xml" --rom_model -o "UART_2boards.out"  "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./utils/uartstdio.obj" "C:/ti/TivaWare_C_Series-2.1.1.71/driverlib/ccs/Debug/driverlib.lib" "../tm4c123gh6pm.cmd" -l"libc.a" 
 <Linking>
-'Finished building target: traffic_light_pedestrians.out'
+'Finished building target: UART_2boards.out'
 ' '
 
 **** Build Finished ****
 
-**** Build of configuration Debug for project traffic_light_pedestrians ****
+**** Build of configuration Debug for project UART_2boards ****
 
 "C:\\Program Files (x86)\\ccsv6\\utils\\bin\\gmake" -k all 
 gmake: Nothing to be done for `all'.
 
 **** Build Finished ****
 
-**** Build of configuration Debug for project traffic_light_pedestrians ****
+**** Build of configuration Debug for project UART_2boards ****
+
+"C:\\Program Files (x86)\\ccsv6\\utils\\bin\\gmake" -k all 
+gmake: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project UART_2boards ****
 
 "C:\\Program Files (x86)\\ccsv6\\utils\\bin\\gmake" -k all 
 'Building file: ../main.c'
 'Invoking: ARM Compiler'
 "C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 --abi=eabi -me --include_path="C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/include" --include_path="C:/ti/TivaWare_C_Series-2.1.1.71" -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="main.pp"  "../main.c"
-"../main.c", line 168: warning #112-D: statement is unreachable
-"../main.c", line 44: warning #179-D: variable "ui32Value" was declared but never referenced
-"../main.c", line 45: warning #179-D: variable "ui8PinData" was declared but never referenced
-"../main.c", line 47: warning #179-D: variable "index" was declared but never referenced
 'Finished building: ../main.c'
 ' '
-'Building target: traffic_light_pedestrians.out'
+'Building target: UART_2boards.out'
 'Invoking: ARM Linker'
-"C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 --abi=eabi -me -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --display_error_number --diag_warning=225 --diag_wrap=off -z -m"traffic_light_pedestrians.map" --heap_size=0 --stack_size=512 -i"C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/lib" -i"C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="traffic_light_pedestrians_linkInfo.xml" --rom_model -o "traffic_light_pedestrians.out"  "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "C:/ti/TivaWare_C_Series-2.1.1.71/driverlib/ccs/Debug/driverlib.lib" "../tm4c123gh6pm.cmd" -l"libc.a" 
+"C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 --abi=eabi -me -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --display_error_number --diag_warning=225 --diag_wrap=off -z -m"UART_2boards.map" --heap_size=0 --stack_size=512 -i"C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/lib" -i"C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="UART_2boards_linkInfo.xml" --rom_model -o "UART_2boards.out"  "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./utils/uartstdio.obj" "C:/ti/TivaWare_C_Series-2.1.1.71/driverlib/ccs/Debug/driverlib.lib" "../tm4c123gh6pm.cmd" -l"libc.a" 
 <Linking>
-'Finished building target: traffic_light_pedestrians.out'
+'Finished building target: UART_2boards.out'
 ' '
 
 **** Build Finished ****
 
-**** Build of configuration Debug for project traffic_light_pedestrians ****
+**** Build of configuration Debug for project UART_2boards ****
 
 "C:\\Program Files (x86)\\ccsv6\\utils\\bin\\gmake" -k all 
 'Building file: ../main.c'
 'Invoking: ARM Compiler'
 "C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 --abi=eabi -me --include_path="C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/include" --include_path="C:/ti/TivaWare_C_Series-2.1.1.71" -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="main.pp"  "../main.c"
-"../main.c", line 165: warning #112-D: statement is unreachable
-"../main.c", line 44: warning #179-D: variable "ui32Value" was declared but never referenced
-"../main.c", line 45: warning #179-D: variable "ui8PinData" was declared but never referenced
-"../main.c", line 47: warning #179-D: variable "index" was declared but never referenced
 'Finished building: ../main.c'
 ' '
-'Building target: traffic_light_pedestrians.out'
+'Building target: UART_2boards.out'
 'Invoking: ARM Linker'
-"C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 --abi=eabi -me -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --display_error_number --diag_warning=225 --diag_wrap=off -z -m"traffic_light_pedestrians.map" --heap_size=0 --stack_size=512 -i"C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/lib" -i"C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="traffic_light_pedestrians_linkInfo.xml" --rom_model -o "traffic_light_pedestrians.out"  "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "C:/ti/TivaWare_C_Series-2.1.1.71/driverlib/ccs/Debug/driverlib.lib" "../tm4c123gh6pm.cmd" -l"libc.a" 
+"C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 --abi=eabi -me -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --display_error_number --diag_warning=225 --diag_wrap=off -z -m"UART_2boards.map" --heap_size=0 --stack_size=512 -i"C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/lib" -i"C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="UART_2boards_linkInfo.xml" --rom_model -o "UART_2boards.out"  "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./utils/uartstdio.obj" "C:/ti/TivaWare_C_Series-2.1.1.71/driverlib/ccs/Debug/driverlib.lib" "../tm4c123gh6pm.cmd" -l"libc.a" 
 <Linking>
-'Finished building target: traffic_light_pedestrians.out'
-' '
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project traffic_light_pedestrians ****
-
-"C:\\Program Files (x86)\\ccsv6\\utils\\bin\\gmake" -k all 
-'Building file: ../main.c'
-'Invoking: ARM Compiler'
-"C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 --abi=eabi -me --include_path="C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/include" --include_path="C:/ti/TivaWare_C_Series-2.1.1.71" -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="main.pp"  "../main.c"
-"../main.c", line 164: warning #112-D: statement is unreachable
-"../main.c", line 44: warning #179-D: variable "ui32Value" was declared but never referenced
-"../main.c", line 45: warning #179-D: variable "ui8PinData" was declared but never referenced
-"../main.c", line 47: warning #179-D: variable "index" was declared but never referenced
-"../main.c", line 50: warning #179-D: variable "prevSwitchInput" was declared but never referenced
-'Finished building: ../main.c'
-' '
-'Building target: traffic_light_pedestrians.out'
-'Invoking: ARM Linker'
-"C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 --abi=eabi -me -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --display_error_number --diag_warning=225 --diag_wrap=off -z -m"traffic_light_pedestrians.map" --heap_size=0 --stack_size=512 -i"C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/lib" -i"C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="traffic_light_pedestrians_linkInfo.xml" --rom_model -o "traffic_light_pedestrians.out"  "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "C:/ti/TivaWare_C_Series-2.1.1.71/driverlib/ccs/Debug/driverlib.lib" "../tm4c123gh6pm.cmd" -l"libc.a" 
-<Linking>
-'Finished building target: traffic_light_pedestrians.out'
-' '
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project traffic_light_pedestrians ****
-
-"C:\\Program Files (x86)\\ccsv6\\utils\\bin\\gmake" -k all 
-'Building file: ../main.c'
-'Invoking: ARM Compiler'
-"C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 --abi=eabi -me --include_path="C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/include" --include_path="C:/ti/TivaWare_C_Series-2.1.1.71" -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="main.pp"  "../main.c"
-"../main.c", line 168: warning #112-D: statement is unreachable
-"../main.c", line 44: warning #179-D: variable "ui32Value" was declared but never referenced
-"../main.c", line 45: warning #179-D: variable "ui8PinData" was declared but never referenced
-"../main.c", line 47: warning #179-D: variable "index" was declared but never referenced
-"../main.c", line 49: warning #179-D: variable "prevState" was declared but never referenced
-'Finished building: ../main.c'
-' '
-'Building target: traffic_light_pedestrians.out'
-'Invoking: ARM Linker'
-"C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 --abi=eabi -me -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --display_error_number --diag_warning=225 --diag_wrap=off -z -m"traffic_light_pedestrians.map" --heap_size=0 --stack_size=512 -i"C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/lib" -i"C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="traffic_light_pedestrians_linkInfo.xml" --rom_model -o "traffic_light_pedestrians.out"  "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "C:/ti/TivaWare_C_Series-2.1.1.71/driverlib/ccs/Debug/driverlib.lib" "../tm4c123gh6pm.cmd" -l"libc.a" 
-<Linking>
-'Finished building target: traffic_light_pedestrians.out'
+'Finished building target: UART_2boards.out'
 ' '
 
 **** Build Finished ****

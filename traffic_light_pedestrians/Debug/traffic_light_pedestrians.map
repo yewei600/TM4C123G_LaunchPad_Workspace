@@ -1,7 +1,7 @@
 ******************************************************************************
                   TI ARM Linker PC v5.1.6                      
 ******************************************************************************
->> Linked Thu Feb 11 20:54:51 2016
+>> Linked Wed Feb 17 22:36:52 2016
 
 OUTPUT FILE NAME:   <traffic_light_pedestrians.out>
 ENTRY POINT SYMBOL: "_c_int00"  address: 00000831

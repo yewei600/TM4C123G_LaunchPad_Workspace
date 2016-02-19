@@ -1,0 +1,14 @@
+
+**** Clean-only build of configuration Debug for project LCD_LCM1602C_driver ****
+
+"C:\\Program Files (x86)\\ccsv6\\utils\\bin\\gmake" -k clean 
+DEL /F  "LCD_LCM1602C_driver.out"  "LCD_LCM1602C_driver.hex" 
+Could Not Find C:\TM4C123G_LaunchPad_Workspace\LCD_LCM1602C_driver\Debug\LCD_LCM1602C_driver.out
+DEL /F "main.pp" "tm4c123gh6pm_startup_ccs.pp" 
+Could Not Find C:\TM4C123G_LaunchPad_Workspace\LCD_LCM1602C_driver\Debug\main.pp
+DEL /F "main.obj" "tm4c123gh6pm_startup_ccs.obj" 
+Could Not Find C:\TM4C123G_LaunchPad_Workspace\LCD_LCM1602C_driver\Debug\main.obj
+'Finished clean'
+' '
+
+**** Build Finished ****
