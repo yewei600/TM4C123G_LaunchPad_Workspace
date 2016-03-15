@@ -1,14 +1,7 @@
 
-**** Clean-only build of configuration Debug for project ADC ****
+**** Build of configuration Debug for project ADC ****
 
-"C:\\Program Files (x86)\\ccsv6\\utils\\bin\\gmake" -k clean 
-DEL /F  "ADC.out"  "ADC.hex" 
-Could Not Find C:\TM4C123G_LaunchPad_Workspace\ADC\Debug\ADC.out
-DEL /F "main.pp" "tm4c123gh6pm_startup_ccs.pp" 
-Could Not Find C:\TM4C123G_LaunchPad_Workspace\ADC\Debug\main.pp
-DEL /F "main.obj" "tm4c123gh6pm_startup_ccs.obj" 
-Could Not Find C:\TM4C123G_LaunchPad_Workspace\ADC\Debug\main.obj
-'Finished clean'
-' '
+"C:\\Program Files (x86)\\ccsv6\\utils\\bin\\gmake" -k all 
+gmake: Nothing to be done for `all'.
 
 **** Build Finished ****

@@ -1,0 +1,69 @@
+#include <stdint.h>
+#include <stdbool.h>
+#include "inc/hw_memmap.h"
+#include "inc/hw_types.h"
+#include "driverlib/debug.h"
+#include "driverlib/sysctl.h"
+#include "driverlib/adc.h"
+#include "driverlib/gpio.h"
+#include "driverlib/uart.h"
+#include "driverlib/pin_map.h"
+
+/*
+ * main.c
+ */
+
+void UARTConfig(){
+	SysCtlPeripheralEnable(SYSCTL_PERIPH_UART0);
+	SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOA);
+
+	GPIOPinConfigure(GPIO_PA0_U0RX);
+	GPIOPinConfigure(GPIO_PA1_U0TX);
+	GPIOPinTypeUART(GPIO_PORTA_BASE,GPIO_PIN_0|GPIO_PIN_1);
+
+	//UART stdio init
+	UARTClockSourceSet(UART0_BASE, UART_CLOCK_PIOSC);
+	UARTStdioConfig(0,9600,16000000);
+
+}
+
+
+int main(void) {
+	uint32_t ui32ADCValue;
+
+	SysCtlClockSet(SYSCTL_SYSDIV_5|SYSCTL_USE_PLL|SYSCTL_OSC_MAIN|SYSCTL_XTAL_16MHZ);
+
+	//enable the ADC1
+	SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOE);
+	SysCtlPeripheralEnable(SYSCTL_PERIPH_ADC1);
+
+	GPIOPinTypeADC(GPIO_PORTE_BASE,GPIO_PIN_2);
+
+	//enable UART
+	UARTConfig();
+
+
+	//configure the ADC
+	ADCSequenceConfigure(ADC1_BASE,3,ADC_TRIGGER_EXTERNAL,0);
+	GPIOADCTriggerEnable(GPIO_PORTE_BASE,GPIO_PIN_2);
+	//ADCSequenceStepConfigure(ADC1_BASE,1,0,ADC_CTL_TS);  //pg 801
+	ADCSequenceStepConfigure(ADC1_BASE,3,0,ADC_CTL_CH1|ADC_CTL_IE|ADC_CTL_END);
+	ADCSequenceEnable(ADC0_BASE,3);
+
+
+	while(1){
+
+		while(!ADCIntStatus(ADC1_BASE, 3, false))
+		{
+		}
+
+		ADCIntClear(ADC1_BASE, 3);
+		ADCSequenceDataGet(ADC1_BASE, 3, &ui32ADCValue);
+
+	}
+
+
+
+
+	return 0;
+}
