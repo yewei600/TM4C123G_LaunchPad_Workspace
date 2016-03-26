@@ -1,14 +1,22 @@
 
-**** Clean-only build of configuration Debug for project gpio_init ****
+**** Build of configuration Debug for project gpio_init ****
 
-"C:\\Program Files (x86)\\ccsv6\\utils\\bin\\gmake" -k clean 
-DEL /F  "gpio_init.out"  "gpio_init.hex" 
-Could Not Find C:\TM4C123G_LaunchPad_Workspace\gpio_init\Debug\gpio_init.out
-DEL /F "main.pp" "tm4c123gh6pm_startup_ccs.pp" 
-Could Not Find C:\TM4C123G_LaunchPad_Workspace\gpio_init\Debug\main.pp
-DEL /F "main.obj" "tm4c123gh6pm_startup_ccs.obj" 
-Could Not Find C:\TM4C123G_LaunchPad_Workspace\gpio_init\Debug\main.obj
-'Finished clean'
+"C:\\Program Files (x86)\\ccsv6\\utils\\bin\\gmake" -k all 
+'Building file: ../main.c'
+'Invoking: ARM Compiler'
+"C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 --abi=eabi -me --include_path="C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/include" --include_path="C:/ti/TivaWare_C_Series-2.1.1.71" -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="main.pp"  "../main.c"
+'Finished building: ../main.c'
+' '
+'Building file: ../tm4c123gh6pm_startup_ccs.c'
+'Invoking: ARM Compiler'
+"C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 --abi=eabi -me --include_path="C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/include" --include_path="C:/ti/TivaWare_C_Series-2.1.1.71" -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="tm4c123gh6pm_startup_ccs.pp"  "../tm4c123gh6pm_startup_ccs.c"
+'Finished building: ../tm4c123gh6pm_startup_ccs.c'
+' '
+'Building target: gpio_init.out'
+'Invoking: ARM Linker'
+"C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 --abi=eabi -me -g --gcc --define=ccs="ccs" --define=PART_TM4C123GH6PM --display_error_number --diag_warning=225 --diag_wrap=off -z -m"gpio_init.map" --heap_size=0 --stack_size=512 -i"C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/lib" -i"C:/Program Files (x86)/ccsv6/tools/compiler/arm_5.1.6/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="gpio_init_linkInfo.xml" --rom_model -o "gpio_init.out"  "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "C:/ti/TivaWare_C_Series-2.1.1.71/driverlib/ccs/Debug/driverlib.lib" "../tm4c123gh6pm.cmd" -l"libc.a" 
+<Linking>
+'Finished building target: gpio_init.out'
 ' '
 
 **** Build Finished ****

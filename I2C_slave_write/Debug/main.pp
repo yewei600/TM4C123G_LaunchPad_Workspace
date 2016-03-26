@@ -16,6 +16,9 @@ main.obj: C:/ti/TivaWare_C_Series-2.1.1.71/driverlib/i2c.h
 main.obj: C:/ti/TivaWare_C_Series-2.1.1.71/driverlib/sysctl.h
 main.obj: C:/ti/TivaWare_C_Series-2.1.1.71/driverlib/gpio.h
 main.obj: C:/ti/TivaWare_C_Series-2.1.1.71/driverlib/pin_map.h
+main.obj: C:/ti/TivaWare_C_Series-2.1.1.71/utils/uartstdio.h
+main.obj: C:/Program\ Files\ (x86)/ccsv6/tools/compiler/arm_5.1.6/include/stdarg.h
+main.obj: C:/ti/TivaWare_C_Series-2.1.1.71/driverlib/uart.h
 
 ../main.c: 
 C:/Program\ Files\ (x86)/ccsv6/tools/compiler/arm_5.1.6/include/stdarg.h: 
@@ -33,3 +36,6 @@ C:/ti/TivaWare_C_Series-2.1.1.71/driverlib/i2c.h:
 C:/ti/TivaWare_C_Series-2.1.1.71/driverlib/sysctl.h: 
 C:/ti/TivaWare_C_Series-2.1.1.71/driverlib/gpio.h: 
 C:/ti/TivaWare_C_Series-2.1.1.71/driverlib/pin_map.h: 
+C:/ti/TivaWare_C_Series-2.1.1.71/utils/uartstdio.h: 
+C:/Program\ Files\ (x86)/ccsv6/tools/compiler/arm_5.1.6/include/stdarg.h: 
+C:/ti/TivaWare_C_Series-2.1.1.71/driverlib/uart.h: 

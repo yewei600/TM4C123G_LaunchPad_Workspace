@@ -10,6 +10,20 @@
 #include "inc/hw_gpio.h"
 #include "driverlib/rom.h"
 
+/*
+West Green	 PE5
+West Yellow	 PE4
+West Red	 PE3
+South Green	 PE2
+South Yellow PE1
+South Red	 PE0
+
+West Car	PD0
+South Car	PD1
+Pedestrian 	PD6
+
+ */
+
 //States definition
 #define WEST 0
 #define waitWEST 1
@@ -22,8 +36,6 @@
 //define walk lights
 #define RED 2
 #define GREEN 8
-
-
 
 
 //FSM struct

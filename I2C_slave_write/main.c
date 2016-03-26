@@ -9,6 +9,8 @@
 #include "driverlib/sysctl.h"
 #include "driverlib/gpio.h"
 #include "driverlib/pin_map.h"
+#include "utils/uartstdio.h"
+#include "driverlib/uart.h"
 
 
 /*
@@ -18,7 +20,7 @@
  */
 
 
-//initialize I2C module 0
+//initialize I2C module 1
 //Slightly modified version of TI's example code
 void InitSlaveI2C1(void)
 {
@@ -50,7 +52,7 @@ void InitSlaveI2C1(void)
 void I2CSendString(char array[])
 {
 	//initialize index into array
-	uint8_t i = 1;
+	uint8_t i = 0;
 
 	//put data to be sent into FIFO
 	while(array[i+1] != '\0'){
@@ -58,23 +60,78 @@ void I2CSendString(char array[])
 	}
 
 	I2CSlaveDataPut(I2C1_BASE,array[i]);
+}
+
+void
+ConfigureUART(void)
+{
+	//
+	// Enable the GPIO Peripheral used by the UART.
+	//
+	SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOA);
+
+	//
+	// Enable UART0
+	//
+	SysCtlPeripheralEnable(SYSCTL_PERIPH_UART0);
+
+	//
+	// Configure GPIO Pins for UART mode.
+	//
+	GPIOPinConfigure(GPIO_PA0_U0RX);
+	GPIOPinConfigure(GPIO_PA1_U0TX);
+	GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_0 | GPIO_PIN_1);
+
+	//
+	// Use the internal 16MHz oscillator as the UART clock source.
+	//
+	UARTClockSourceSet(UART0_BASE, UART_CLOCK_PIOSC);
+
+	//
+	// Initialize the UART for console I/O.
+	//
+	UARTStdioConfig(0, 9600, 16000000);
+}
+
+
+//currently not using interrupt
+void I2C1SlaveIntHandler(void){
+	uint32_t status;
+	char userInput[50];
+	uint8_t cnt=0;
+	status=I2CSlaveIntStatus(I2C1_BASE,true);
+	I2CSlaveIntClearEx(I2C1_BASE,status);
+
+	if(status==I2C_SLAVE_INT_DATA){
+		//userInput=I2CSlaveDataGet(I2C1_BASE);
+		//UARTprintf("%s\n"userInput);
+	}
+
 
 }
 
-// have the Arduino send some binarys,   and display it using external LEDs
 
 int main(void) {
 
 	SysCtlClockSet(SYSCTL_SYSDIV_5|SYSCTL_USE_PLL|SYSCTL_XTAL_16MHZ|SYSCTL_OSC_MAIN);
+	char cnt=0;
+	uint32_t userInput;
 
 	InitSlaveI2C1();
+	ConfigureUART();
 
-	char string[8]="Hello!\n";
+	char string[8]="Canada";
 
 	while(1){
 		//if the master requests data from the slave
 		if(I2CSlaveStatus(I2C1_BASE)==I2C_SLAVE_ACT_TREQ){
-			I2CSendString(string);
+			I2CSlaveDataPut(I2C1_BASE,cnt);
+			cnt++;
+			cnt=cnt%5;
+		}
+		else if (I2CSlaveStatus(I2C1_BASE)==I2C_SLAVE_ACT_RREQ){
+			userInput=I2CSlaveDataGet(I2C1_BASE);
+			UARTprintf("%s\n",&userInput);
 		}
 		SysCtlDelay(1000000);
 

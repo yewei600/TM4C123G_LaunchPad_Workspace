@@ -1,2 +1,4 @@
 1457977435547	Rename resource 'I2C_test'
 1457978583606	Rename resource 'I2C_master_test'
+1458162850060	Delete resource 'LCD_LCM1602C_driver'
+1458165261224	Rename resource 'light_isl29023'

@@ -1,0 +1,426 @@
+******************************************************************************
+                  TI ARM Linker PC v5.1.6                      
+******************************************************************************
+>> Linked Wed Mar 16 22:10:12 2016
+
+OUTPUT FILE NAME:   <lightSensor_i2c_rpi_iot.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 00001ac1
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  FLASH                 00000000   00040000  000022b0  0003dd50  R  X
+  SRAM                  20000000   00008000  00000a2d  000075d3  RW X
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+00000000    00000000    000022b8   000022b8    r-x
+  00000000    00000000    0000026c   0000026c    r-- .intvecs
+  0000026c    0000026c    00001e56   00001e56    r-x .text
+  000020c4    000020c4    000001ae   000001ae    r-- .const
+  00002278    00002278    00000040   00000040    r-- .cinit
+20000000    20000000    00000a30   00000000    rw-
+  20000000    20000000    000005fd   00000000    rw- .bss
+  20000600    20000600    00000400   00000000    rw- .stack
+  20000a00    20000a00    00000030   00000000    rw- .data
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.intvecs   0    00000000    0000026c     
+                  00000000    0000026c     startup_ccs.obj (.intvecs)
+
+.init_array 
+*          0    00000000    00000000     UNINITIALIZED
+
+.text      0    0000026c    00001e56     
+                  0000026c    0000029c     light_isl29023.obj (.text:main)
+                  00000508    000001ea     uartstdio.obj (.text:UARTvprintf)
+                  000006f2    00000002     startup_ccs.obj (.text:FaultISR)
+                  000006f4    00000160     uartstdio.obj (.text:UARTStdioIntHandler)
+                  00000854    00000130     driverlib.lib : gpio.obj (.text:GPIOPadConfigSet)
+                  00000984    0000010c                   : sysctl.obj (.text:SysCtlClockGet)
+                  00000a90    00000100     rgb.obj (.text:RGBInit)
+                  00000b90    000000f2     sensorlib.lib : i2cm_drv.obj (.text:I2CMIntHandler)
+                  00000c82    00000002     startup_ccs.obj (.text:IntDefaultHandler)
+                  00000c84    000000c0     rgb.obj (.text:RGBEnable)
+                  00000d44    000000b0     uartstdio.obj (.text:UARTStdioConfig)
+                  00000df4    000000a8     uartstdio.obj (.text:UARTwrite)
+                  00000e9c    000000a4     light_isl29023.obj (.text:ISL29023AppErrorHandler)
+                  00000f40    0000009c     rtsv7M4_T_le_v4SPD16_eabi.lib : memcpy_t2.obj (.text)
+                  00000fdc    00000098     sensorlib.lib : i2cm_drv.obj (.text:I2CMStateIdle)
+                  00001074    00000094     rtsv7M4_T_le_v4SPD16_eabi.lib : auto_init.obj (.text)
+                  00001108    00000090     rgb.obj (.text:RGBColorSet)
+                  00001198    0000008c     uartstdio.obj (.text:UARTPrimeTransmit)
+                  00001224    00000088     sensorlib.lib : i2cm_drv.obj (.text:I2CMCommand)
+                  000012ac    00000078     rgb.obj (.text:RGBBlinkRateSet)
+                  00001324    00000070     sensorlib.lib : i2cm_drv.obj (.text:I2CMReadModifyWrite8)
+                  00001394    00000068                   : isl29023.obj (.text:ISL29023Write)
+                  000013fc    00000068     driverlib.lib : interrupt.obj (.text:IntDisable)
+                  00001464    00000068                   : interrupt.obj (.text:IntEnable)
+                  000014cc    00000068     rgb.obj (.text:RGBDisable)
+                  00001534    00000064     light_isl29023.obj (.text:ConfigureUART)
+                  00001598    00000064     driverlib.lib : interrupt.obj (.text:IntIsEnabled)
+                  000015fc    00000060     sensorlib.lib : i2cm_drv.obj (.text:I2CMReadModifyWrite8Callback)
+                  0000165c    0000005e                   : i2cm_drv.obj (.text:I2CMStateWritePause)
+                  000016ba    0000005e     rtsv7M4_T_le_v4SPD16_eabi.lib : copy_decompress_rle.obj (.text)
+                  00001718    00000054     sensorlib.lib : i2cm_drv.obj (.text:I2CMWrite8)
+                  0000176c    00000054                   : isl29023.obj (.text:ISL29023Init)
+                  000017c0    00000050                   : i2cm_drv.obj (.text:I2CMStateWriteFinal)
+                  00001810    00000050                   : isl29023.obj (.text:ISL29023DataRead)
+                  00001860    00000050     light_isl29023.obj (.text:InitSlaveI2C1)
+                  000018b0    00000050     driverlib.lib : sysctl.obj (.text:SysCtlPeripheralReset)
+                  00001900    00000050     rtsv7M4_T_le_v4SPD16_eabi.lib : fs_toull_t2.obj (.text)
+                  00001950    0000004c     sensorlib.lib : isl29023.obj (.text:ISL29023ReadModifyWrite)
+                  0000199c    0000004a                   : i2cm_drv.obj (.text:I2CMStateReadNext)
+                  000019e6    00000002     startup_ccs.obj (.text:NmiSR)
+                  000019e8    00000048     driverlib.lib : gpio.obj (.text:GPIOPinConfigure)
+                  00001a30    00000048     sensorlib.lib : i2cm_drv.obj (.text:I2CMStateWriteNext)
+                  00001a78    00000048     driverlib.lib : i2c.obj (.text:I2CMasterInitExpClk)
+                  00001ac0    00000048     rtsv7M4_T_le_v4SPD16_eabi.lib : boot.obj (.text)
+                  00001b08    00000044     sensorlib.lib : i2cm_drv.obj (.text:I2CMStateCallback)
+                  00001b4c    00000044     rtsv7M4_T_le_v4SPD16_eabi.lib : cpy_tbl.obj (.text)
+                  00001b90    00000044                                   : exit.obj (.text)
+                  00001bd4    00000042                                   : u_divt2.obj (.text)
+                  00001c16    00000040     sensorlib.lib : i2cm_drv.obj (.text:I2CMStateReadFinal)
+                  00001c56    00000040                   : isl29023.obj (.text:ISL29023Callback)
+                  00001c96    0000003e                   : i2cm_drv.obj (.text:I2CMStateReadPause)
+                  00001cd4    0000003c     uartstdio.obj (.text:UARTFlushTx)
+                  00001d10    0000003a     sensorlib.lib : i2cm_drv.obj (.text:I2CMWrite8Callback)
+                  00001d4a    00000002     --HOLE-- [fill = 0]
+                  00001d4c    00000038     rgb.obj (.text:RGBBlinkIntHandler)
+                  00001d84    00000034     sensorlib.lib : i2cm_drv.obj (.text:I2CMInit)
+                  00001db8    00000034     driverlib.lib : sysctl.obj (.text:SysCtlPeripheralEnable)
+                  00001dec    00000030     sensorlib.lib : i2cm_drv.obj (.text:I2CMTransferResume)
+                  00001e1c    0000002c     light_isl29023.obj (.text:ISL29023AppI2CWait)
+                  00001e48    0000002c     light_isl29023.obj (.text:IntGPIOe)
+                  00001e74    0000002c     uartstdio.obj (.text:UARTFlushRx)
+                  00001ea0    0000002a     driverlib.lib : gpio.obj (.text:GPIODirModeSet)
+                  00001eca    0000002a     sensorlib.lib : i2cm_drv.obj (.text:I2CMStateReadFirst)
+                  00001ef4    00000020                   : i2cm_drv.obj (.text:I2CMStateReadOne)
+                  00001f14    0000001a                   : i2cm_drv.obj (.text:I2CMStateReadWait)
+                  00001f2e    0000001a     uartstdio.obj (.text:UARTprintf)
+                  00001f48    00000018     light_isl29023.obj (.text:ISL29023AppCallback)
+                  00001f60    00000018     uartstdio.obj (.text:IsBufferFull)
+                  00001f78    00000018     rtsv7M4_T_le_v4SPD16_eabi.lib : args_main.obj (.text)
+                  00001f90    00000014     rgb.obj (.text:RGBIntensitySet)
+                  00001fa4    00000014     light_isl29023.obj (.text:SysTickIntHandler)
+                  00001fb8    00000014     rtsv7M4_T_le_v4SPD16_eabi.lib : _lock.obj (.text)
+                  00001fcc    00000012     driverlib.lib : gpio.obj (.text:GPIOPinTypeI2C)
+                  00001fde    00000012                   : gpio.obj (.text:GPIOPinTypeI2CSCL)
+                  00001ff0    00000012     rtsv7M4_T_le_v4SPD16_eabi.lib : copy_zero_init.obj (.text:decompress:ZI)
+                  00002002    00000010     driverlib.lib : i2c.obj (.text:I2CSlaveEnable)
+                  00002012    0000000e                   : gpio.obj (.text:GPIOIntStatus)
+                  00002020    0000000e                   : i2c.obj (.text:I2CSlaveInit)
+                  0000202e    0000000e     uartstdio.obj (.text:IsBufferEmpty)
+                  0000203c    0000000e     rtsv7M4_T_le_v4SPD16_eabi.lib : copy_decompress_none.obj (.text:decompress:none)
+                  0000204a    0000000c     driverlib.lib : gpio.obj (.text:GPIOIntEnable)
+                  00002056    00000002     --HOLE-- [fill = 0]
+                  00002058    0000000c     light_isl29023.obj (.text:ISL29023I2CIntHandler)
+                  00002064    0000000c     driverlib.lib : interrupt.obj (.text:IntTrigger)
+                  00002070    0000000a                   : i2c.obj (.text:I2CMasterEnable)
+                  0000207a    00000008                   : i2c.obj (.text:I2CMasterIntClear)
+                  00002082    00000008                   : i2c.obj (.text:I2CMasterIntEnableEx)
+                  0000208a    00000008                   : i2c.obj (.text:I2CMasterSlaveAddrSet)
+                  00002092    00000006                   : gpio.obj (.text:GPIOIntClear)
+                  00002098    00000006                   : i2c.obj (.text:I2CSlaveDataPut)
+                  0000209e    00000006                   : i2c.obj (.text:I2CSlaveStatus)
+                  000020a4    00000006     startup_ccs.obj (.text:ResetISR)
+                  000020aa    00000006     driverlib.lib : uart.obj (.text:UARTClockSourceSet)
+                  000020b0    00000006     rtsv7M4_T_le_v4SPD16_eabi.lib : copy_decompress_rle.obj (.text:decompress:rle24)
+                  000020b6    00000004     driverlib.lib : i2c.obj (.text:I2CMasterControl)
+                  000020ba    00000004                   : i2c.obj (.text:I2CMasterDataGet)
+                  000020be    00000004                   : i2c.obj (.text:I2CMasterDataPut)
+
+.const     0    000020c4    000001ae     
+                  000020c4    00000090     driverlib.lib : gpio.obj (.const:g_pui32GPIOBaseAddrs)
+                  00002154    00000070                   : interrupt.obj (.const)
+                  000021c4    0000006c                   : sysctl.obj (.const:g_pui32Xtals)
+                  00002230    00000028     uartstdio.obj (.const)
+                  00002258    00000012     uartstdio.obj (.const:.string)
+                  0000226a    00000008     light_isl29023.obj (.const:.string)
+
+.cinit     0    00002278    00000040     
+                  00002278    00000019     (.cinit..data.load) [load image, compression = rle]
+                  00002291    00000003     --HOLE-- [fill = 0]
+                  00002294    0000000c     (__TI_handler_table)
+                  000022a0    00000008     (.cinit..bss.load) [load image, compression = zero_init]
+                  000022a8    00000010     (__TI_cinit_table)
+
+.bss       0    20000000    000005fd     UNINITIALIZED
+                  20000000    00000400     uartstdio.obj (.bss:g_pcUARTTxBuffer)
+                  20000400    00000124     light_isl29023.obj (.bss:g_sI2CInst)
+                  20000524    00000080     uartstdio.obj (.bss:g_pcUARTRxBuffer)
+                  200005a4    0000002c     light_isl29023.obj (.bss:g_sISL29023Inst)
+                  200005d0    0000000c     (.common:g_pui32Colors)
+                  200005dc    0000000c     (.common:g_ui32Colors)
+                  200005e8    00000004     (.common:g_ui32PortNum)
+                  200005ec    00000004     (.common:g_vui8DataFlag)
+                  200005f0    00000004     (.common:g_vui8ErrorFlag)
+                  200005f4    00000004     (.common:g_vui8IntensityFlag)
+                  200005f8    00000004     (.common:ulFlags$1)
+                  200005fc    00000001     (.common:g_bDisableEcho)
+
+.stack     0    20000600    00000400     UNINITIALIZED
+                  20000600    00000400     --HOLE--
+
+.data      0    20000a00    00000030     UNINITIALIZED
+                  20000a00    00000015     uartstdio.obj (.data)
+                  20000a15    00000003     --HOLE--
+                  20000a18    00000008     rtsv7M4_T_le_v4SPD16_eabi.lib : _lock.obj (.data)
+                  20000a20    00000008                                   : exit.obj (.data)
+                  20000a28    00000004     rgb.obj (.data)
+                  20000a2c    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : stkdepth_vars.obj (.data)
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 000022a8 records: 2, size/record: 8, table size: 16
+	.data: load addr=00002278, load size=00000019 bytes, run addr=20000a00, run size=00000030 bytes, compression=rle
+	.bss: load addr=000022a0, load size=00000008 bytes, run addr=20000000, run size=000005fd bytes, compression=zero_init
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 00002294 records: 3, size/record: 4, table size: 12
+	index: 0, handler: __TI_decompress_rle24
+	index: 1, handler: __TI_decompress_none
+	index: 2, handler: __TI_zero_init
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address    name
+--------   ----
+00001b91   C$$EXIT
+00001535   ConfigureUART
+00001ea1   GPIODirModeSet
+00002093   GPIOIntClear
+0000204b   GPIOIntEnable
+00002013   GPIOIntStatus
+00000855   GPIOPadConfigSet
+000019e9   GPIOPinConfigure
+00001fcd   GPIOPinTypeI2C
+00001fdf   GPIOPinTypeI2CSCL
+00001225   I2CMCommand
+00001d85   I2CMInit
+00000b91   I2CMIntHandler
+00001325   I2CMReadModifyWrite8
+00001ded   I2CMTransferResume
+00001719   I2CMWrite8
+000020b7   I2CMasterControl
+000020bb   I2CMasterDataGet
+000020bf   I2CMasterDataPut
+00002071   I2CMasterEnable
+00001a79   I2CMasterInitExpClk
+0000207b   I2CMasterIntClear
+00002083   I2CMasterIntEnableEx
+0000208b   I2CMasterSlaveAddrSet
+00002099   I2CSlaveDataPut
+00002003   I2CSlaveEnable
+00002021   I2CSlaveInit
+0000209f   I2CSlaveStatus
+00001f49   ISL29023AppCallback
+00000e9d   ISL29023AppErrorHandler
+00001e1d   ISL29023AppI2CWait
+00001811   ISL29023DataRead
+00002059   ISL29023I2CIntHandler
+0000176d   ISL29023Init
+00001951   ISL29023ReadModifyWrite
+00001395   ISL29023Write
+00001861   InitSlaveI2C1
+000013fd   IntDisable
+00001465   IntEnable
+00001e49   IntGPIOe
+00001599   IntIsEnabled
+00002065   IntTrigger
+00001d4d   RGBBlinkIntHandler
+000012ad   RGBBlinkRateSet
+00001109   RGBColorSet
+000014cd   RGBDisable
+00000c85   RGBEnable
+00000a91   RGBInit
+00001f91   RGBIntensitySet
+000020a5   ResetISR
+UNDEFED    SHT$$INIT_ARRAY$$Base
+UNDEFED    SHT$$INIT_ARRAY$$Limit
+00000985   SysCtlClockGet
+00001db9   SysCtlPeripheralEnable
+000018b1   SysCtlPeripheralReset
+00001fa5   SysTickIntHandler
+000020ab   UARTClockSourceSet
+00001e75   UARTFlushRx
+00001cd5   UARTFlushTx
+00000d45   UARTStdioConfig
+000006f5   UARTStdioIntHandler
+00001f2f   UARTprintf
+00000509   UARTvprintf
+00000df5   UARTwrite
+20000a00   __STACK_END
+00000400   __STACK_SIZE
+20000a00   __STACK_TOP
+000022a8   __TI_CINIT_Base
+000022b8   __TI_CINIT_Limit
+00002294   __TI_Handler_Table_Base
+000022a0   __TI_Handler_Table_Limit
+00000001   __TI_args_main
+00001075   __TI_auto_init
+20000a20   __TI_cleanup_ptr
+0000203d   __TI_decompress_none
+000020b1   __TI_decompress_rle24
+20000a24   __TI_dtors_ptr
+00000000   __TI_static_base__
+00001ff1   __TI_zero_init
+00001901   __aeabi_f2ulz
+00000f41   __aeabi_memcpy
+00000f41   __aeabi_memcpy4
+00000f41   __aeabi_memcpy8
+00001bd5   __aeabi_uidivmod
+ffffffff   __binit__
+ffffffff   __c_args__
+20000600   __stack
+00001f79   _args_main
+00001ac1   _c_int00
+20000a18   _lock
+00001fc7   _nop
+00001fbf   _register_lock
+00001fb9   _register_unlock
+20000a1c   _unlock
+00001b95   abort
+ffffffff   binit
+00001b4d   copy_in
+00001b9d   exit
+00000000   g_pfnVectors
+200005d0   g_pui32Colors
+20000400   g_sI2CInst
+200005a4   g_sISL29023Inst
+200005ec   g_vui8DataFlag
+200005f0   g_vui8ErrorFlag
+200005f4   g_vui8IntensityFlag
+0000026d   main
+20000a2c   main_func_sp
+00000f41   memcpy
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address    name
+--------   ----
+00000000   __TI_static_base__
+00000000   g_pfnVectors
+00000001   __TI_args_main
+0000026d   main
+00000400   __STACK_SIZE
+00000509   UARTvprintf
+000006f5   UARTStdioIntHandler
+00000855   GPIOPadConfigSet
+00000985   SysCtlClockGet
+00000a91   RGBInit
+00000b91   I2CMIntHandler
+00000c85   RGBEnable
+00000d45   UARTStdioConfig
+00000df5   UARTwrite
+00000e9d   ISL29023AppErrorHandler
+00000f41   __aeabi_memcpy
+00000f41   __aeabi_memcpy4
+00000f41   __aeabi_memcpy8
+00000f41   memcpy
+00001075   __TI_auto_init
+00001109   RGBColorSet
+00001225   I2CMCommand
+000012ad   RGBBlinkRateSet
+00001325   I2CMReadModifyWrite8
+00001395   ISL29023Write
+000013fd   IntDisable
+00001465   IntEnable
+000014cd   RGBDisable
+00001535   ConfigureUART
+00001599   IntIsEnabled
+00001719   I2CMWrite8
+0000176d   ISL29023Init
+00001811   ISL29023DataRead
+00001861   InitSlaveI2C1
+000018b1   SysCtlPeripheralReset
+00001901   __aeabi_f2ulz
+00001951   ISL29023ReadModifyWrite
+000019e9   GPIOPinConfigure
+00001a79   I2CMasterInitExpClk
+00001ac1   _c_int00
+00001b4d   copy_in
+00001b91   C$$EXIT
+00001b95   abort
+00001b9d   exit
+00001bd5   __aeabi_uidivmod
+00001cd5   UARTFlushTx
+00001d4d   RGBBlinkIntHandler
+00001d85   I2CMInit
+00001db9   SysCtlPeripheralEnable
+00001ded   I2CMTransferResume
+00001e1d   ISL29023AppI2CWait
+00001e49   IntGPIOe
+00001e75   UARTFlushRx
+00001ea1   GPIODirModeSet
+00001f2f   UARTprintf
+00001f49   ISL29023AppCallback
+00001f79   _args_main
+00001f91   RGBIntensitySet
+00001fa5   SysTickIntHandler
+00001fb9   _register_unlock
+00001fbf   _register_lock
+00001fc7   _nop
+00001fcd   GPIOPinTypeI2C
+00001fdf   GPIOPinTypeI2CSCL
+00001ff1   __TI_zero_init
+00002003   I2CSlaveEnable
+00002013   GPIOIntStatus
+00002021   I2CSlaveInit
+0000203d   __TI_decompress_none
+0000204b   GPIOIntEnable
+00002059   ISL29023I2CIntHandler
+00002065   IntTrigger
+00002071   I2CMasterEnable
+0000207b   I2CMasterIntClear
+00002083   I2CMasterIntEnableEx
+0000208b   I2CMasterSlaveAddrSet
+00002093   GPIOIntClear
+00002099   I2CSlaveDataPut
+0000209f   I2CSlaveStatus
+000020a5   ResetISR
+000020ab   UARTClockSourceSet
+000020b1   __TI_decompress_rle24
+000020b7   I2CMasterControl
+000020bb   I2CMasterDataGet
+000020bf   I2CMasterDataPut
+00002294   __TI_Handler_Table_Base
+000022a0   __TI_Handler_Table_Limit
+000022a8   __TI_CINIT_Base
+000022b8   __TI_CINIT_Limit
+20000400   g_sI2CInst
+200005a4   g_sISL29023Inst
+200005d0   g_pui32Colors
+200005ec   g_vui8DataFlag
+200005f0   g_vui8ErrorFlag
+200005f4   g_vui8IntensityFlag
+20000600   __stack
+20000a00   __STACK_END
+20000a00   __STACK_TOP
+20000a18   _lock
+20000a1c   _unlock
+20000a20   __TI_cleanup_ptr
+20000a24   __TI_dtors_ptr
+20000a2c   main_func_sp
+ffffffff   __binit__
+ffffffff   __c_args__
+ffffffff   binit
+UNDEFED    SHT$$INIT_ARRAY$$Base
+UNDEFED    SHT$$INIT_ARRAY$$Limit
+
+[108 symbols]

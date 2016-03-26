@@ -3,26 +3,26 @@
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="257" key="DIALOG_WIDTH"/>
 		<item value="179" key="DIALOG_Y_ORIGIN"/>
-		<item value="807" key="DIALOG_X_ORIGIN"/>
 		<item value="381" key="DIALOG_HEIGHT"/>
+		<item value="807" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="wrap"/>
-		<item value="false" key="casesensitive"/>
 		<item value="false" key="isRegEx"/>
+		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="slave_addr" key="selection"/>
+		<item value="PinConfigure" key="selection"/>
 		<list key="findhistory">
+			<item value="pinconfigure"/>
+			<item value="i2c1"/>
+			<item value="InitSlaveI2C1"/>
+			<item value="ui8Mask"/>
 			<item value="slave_addr"/>
 			<item value="i2c0"/>
 			<item value="1"/>
 			<item value="portd"/>
-			<item value="ADC0"/>
-			<item value="uartechoset"/>
-			<item value="PedestrianSwitch"/>
-			<item value="SouthCarSwitch"/>
 		</list>
 		<list key="replacehistory">
 			<item value="ADC1"/>
